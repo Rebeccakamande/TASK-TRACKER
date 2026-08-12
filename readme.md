@@ -138,19 +138,19 @@ The following operations have been tested successfully:
 - Rejecting an invalid task status
 - Project Status
 
-Frontend and Backend
+### Frontend and Backend
 
 The application uses Django as the backend and provides JSON-based API endpoints for task operations.
 
 The browser frontend uses JavaScript fetch() requests to communicate with these endpoints.
 
-Why Django?
+### Why Django?
 
 Django was chosen because it is a framework I am comfortable working with and it provides the tools needed to build both the backend logic and database layer efficiently within the assignment's time constraints.
 
 The frontend uses HTML, CSS, JavaScript, and Bootstrap to provide a simple interface for interacting with the API.
 
-Assumptions and Scope
+### Assumptions and Scope
 
 The application is intentionally kept small and focused on the requirements of the take-home assignment.
 
@@ -158,7 +158,7 @@ Authentication and user-specific task ownership are not included because they we
 
 SQLite is used as the database because the assignment only requires persistent data and does not require a production database.
 
-Project Status
+### Project Status
 
 The core task management functionality is implemented, including the frontend, backend API, validation, and CRUD operations.
 
