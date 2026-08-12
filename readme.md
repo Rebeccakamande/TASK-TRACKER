@@ -1,54 +1,54 @@
 # Mini Task Tracker
 
-A simple task management application built with Django for the **ICT Intern – Software Developer Take-Home Assignment at Amref Health Africa**.
+A simple full-stack task management application built with Django for the **ICT Intern – Software Developer Take-Home Assignment at Amref Health Africa**.
 
-The application allows users to manage tasks with a title, description, and status.
-
-## Current Project Setup
-
-The project currently includes:
-
-* Django project setup
-* `tasks` Django application
-* `Task` model
-* Task status choices:
-
-  * To Do
-  * In Progress
-  * Done
-* Required task title
-* SQLite database
-* Environment variable configuration using `.env`
-* `.gitignore` configuration
-* Database migrations
+The application allows users to create, view, update, and delete tasks through a browser-based interface. The frontend communicates with the Django backend through HTTP requests and receives task data as JSON.
 
 ## Technologies
 
-* Python
-* Django 6.1
-* SQLite
-* python-dotenv
+- Python
+- Django 6.1
+- SQLite
+- HTML
+- CSS
+- JavaScript
+- Bootstrap 5
+- python-dotenv
 
-## Task Model
+## Features
 
-Each task currently contains:
+- Create a task with:
+  - Title
+  - Description
+  - Status
+- View all tasks
+- Update task details and status
+- Delete tasks
+- Task title validation
+- Task status validation
+- Success and error messages
+- Persistent data using SQLite
+- Frontend communicates with the backend through HTTP requests
+- JSON responses from the backend API
 
-* **Title** — required
-* **Description**
-* **Status** — To Do, In Progress, or Done
+## Task Statuses
 
-## API
+Tasks can have one of three statuses:
 
-The backend currently provides endpoints for managing tasks:
+- To Do
+- In Progress
+- Done
+
+## API Endpoints
 
 | Method | Endpoint | Purpose |
-|---|---|---|
+|--------|----------|---------|
 | POST | `/api/tasks/create/` | Create a task |
-| GET | `/api/tasks/` | List all tasks |
+| GET | `/api/tasks/` | Retrieve all tasks |
 | PATCH | `/api/tasks/<id>/` | Update a task |
 | DELETE | `/api/tasks/<id>/delete/` | Delete a task |
 
-The API communicates using JSON.
+The API returns JSON responses with appropriate HTTP status codes.
 
 ### Validation
 
@@ -138,7 +138,27 @@ The following operations have been tested successfully:
 - Rejecting an invalid task status
 - Project Status
 
-The project is currently under development.
+Frontend and Backend
 
-The backend API and CRUD functionality have been implemented and tested. The frontend will be added in the next stage and will communicate with the backend API over HTTP using JavaScript and JSON.
+The application uses Django as the backend and provides JSON-based API endpoints for task operations.
+
+The browser frontend uses JavaScript fetch() requests to communicate with these endpoints.
+
+Why Django?
+
+Django was chosen because it is a framework I am comfortable working with and it provides the tools needed to build both the backend logic and database layer efficiently within the assignment's time constraints.
+
+The frontend uses HTML, CSS, JavaScript, and Bootstrap to provide a simple interface for interacting with the API.
+
+Assumptions and Scope
+
+The application is intentionally kept small and focused on the requirements of the take-home assignment.
+
+Authentication and user-specific task ownership are not included because they were outside the stated requirements.
+
+SQLite is used as the database because the assignment only requires persistent data and does not require a production database.
+
+Project Status
+
+The core task management functionality is implemented, including the frontend, backend API, validation, and CRUD operations.
 

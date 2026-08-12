@@ -1,0 +1,211 @@
+body {
+
+    background-color: #f5f7fb;
+    color: #172033;
+
+}
+
+/* NAVBAR */
+
+.navbar {
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+}
+.navbar-brand {
+    color: #2563eb !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+
+}
+.navbar-brand:hover {
+
+    color: #1d4ed8 !important;
+}
+.brand-icon {
+
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 8px;
+    margin-right: 8px;
+
+}
+/* PAGE HEADER*/
+
+.page-title {
+
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+.page-subtitle {
+    color: #64748b;
+    margin-bottom: 0;
+
+}
+.tasks-heading {
+    font-weight: 600;
+
+}
+/* CARDS */
+
+.card {
+
+    border: 1px solid #e1e5eb;
+    border-radius: 10px;
+
+}
+
+.card-title {
+
+    font-weight: 600;
+}
+
+/* FORMS */
+
+.form-label {
+
+    font-weight: 500;
+
+}
+.form-control,
+.form-select {
+
+    border-color: #d9dee7;
+    border-radius: 8px;
+    padding: 10px 12px;
+
+}
+.form-control:focus,
+.form-select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(37, 99, 235, 0.12);
+
+}
+/* BUTTONS */
+
+.btn-primary {
+
+    background-color: #2563eb;
+    border-color: #2563eb;
+
+}
+.btn-primary:hover {
+
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+
+}
+.btn-outline-primary {
+
+    color: #2563eb;
+    border-color: #2563eb;
+
+}
+.btn-outline-primary:hover {
+
+    background-color: #2563eb;
+    border-color: #2563eb;
+
+}
+
+/* TASK CARDS */
+.task-card {
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+.task-card:hover {
+
+    transform: translateY(-2px);
+    box-shadow:
+        0 5px 18px
+        rgba(15, 23, 42, 0.08);
+
+}
+.task-title {
+
+    font-weight: 600;
+    color: #172033;
+
+}
+.task-description {
+
+    color: #64748b;
+}
+
+/* STATUS BADGES*/
+
+.status-badge {
+
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 7px;
+
+}
+.status-todo {
+
+    background-color: #2563eb;
+    color: white;
+
+}
+.status-progress {
+
+    background-color: #fbbf24;
+    color: #172033;
+
+}
+.status-done {
+
+    background-color: #22c55e;
+    color: white;
+
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+
+    padding: 50px 20px;
+    text-align: center;
+
+}
+
+.empty-icon {
+
+    font-size: 2.5rem;
+    color: #94a3b8;
+
+}
+
+/* SUCCESS / ERROR MESSAGE */
+
+#message {
+
+    position: fixed;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(600px, 90%);
+    z-index: 1050;
+
+}
+#message .alert {
+    box-shadow:
+        0 5px 20px
+        rgba(15, 23, 42, 0.12);
+
+}

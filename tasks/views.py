@@ -1,11 +1,12 @@
 from django.http import JsonResponse
 import json
 from django.shortcuts import get_object_or_404
-from django.views.decorators.csrf import csrf_exempt
-
+from django.shortcuts import render
 from .models import Task
 
-@csrf_exempt
+def task_page(request):
+    return render(request, "tasks/task.html")
+
 def create_task(request):
     if request.method != "POST":
         return JsonResponse(
@@ -19,6 +20,7 @@ def create_task(request):
     description = data.get("description", "").strip()
     status = data.get("status", Task.Status.TO_DO)
 
+    # title validation
     if not title:
         return JsonResponse(
             {"error": "Task title cannot be empty."},
@@ -75,7 +77,7 @@ def list_tasks(request):
         {"tasks": task_data},
         status=200
     )
-@csrf_exempt
+
 def update_task(request, pk):
 
     if request.method != "PATCH":
@@ -122,7 +124,7 @@ def update_task(request, pk):
         },
         status=200
     )
-@csrf_exempt
+
 def delete_task(request, pk): 
     if request.method != "DELETE":
         return JsonResponse(
@@ -136,3 +138,4 @@ def delete_task(request, pk):
     return JsonResponse({
         "message": "Task deleted successfully"
         }, status = 200)
+
