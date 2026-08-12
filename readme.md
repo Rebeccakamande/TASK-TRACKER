@@ -37,6 +37,29 @@ Each task currently contains:
 * **Description**
 * **Status** — To Do, In Progress, or Done
 
+## API
+
+The backend currently provides endpoints for managing tasks:
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| POST | `/api/tasks/create/` | Create a task |
+| GET | `/api/tasks/` | List all tasks |
+| PATCH | `/api/tasks/<id>/` | Update a task |
+| DELETE | `/api/tasks/<id>/delete/` | Delete a task |
+
+The API communicates using JSON.
+
+### Validation
+
+The API currently validates:
+
+- A task cannot be created without a title.
+- The task status must be a valid status.
+- Unsupported HTTP methods return a `405` response.
+- Requests for tasks that do not exist return a `404` response.
+
+
 ## Setup and Installation
 
 ### 1. Clone the repository
@@ -101,7 +124,21 @@ The application will then be available at:
 ```text
 http://127.0.0.1:8000/
 ```
+## API Testing
 
-## Project Status
+The API has been manually tested using curl.
 
-The project is currently under development. The frontend, task API, and CRUD functionality will be added in subsequent stages.
+The following operations have been tested successfully:
+
+- Creating a task
+- Listing tasks
+- Updating a task
+- Deleting a task
+- Rejecting an empty task title
+- Rejecting an invalid task status
+- Project Status
+
+The project is currently under development.
+
+The backend API and CRUD functionality have been implemented and tested. The frontend will be added in the next stage and will communicate with the backend API over HTTP using JavaScript and JSON.
+
